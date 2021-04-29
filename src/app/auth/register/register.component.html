@@ -1,0 +1,23 @@
+<div class="right">
+
+    <h3>register now </h3>
+   
+    
+    <form (ngSubmit)="onRegister(registerForm)" #registerForm="ngForm">
+     
+      <div class="form-group">
+          <label>Email</label>
+          <input type="email" class="form-control" name="email" ngModel required>
+        </div>
+      
+      <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" minlength="6" name="pass" #pass="ngModel" ngModel required  >
+        <span *ngIf="!pass.valid && registerForm.submitted" class="err-msg"> *Password should be at least 6 characters</span>
+      </div>
+      <button type="submit" class="btn btn-gray"  >Register</button>
+      <button type="button" class="btn btn-gray" routerLink="/">Login</button>
+      <!-- <span *ngIf="checkerr" class="err-msg">*The email address is already in use by another account</span> -->
+    </form>
+
+</div>

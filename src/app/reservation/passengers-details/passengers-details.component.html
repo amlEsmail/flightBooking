@@ -1,0 +1,34 @@
+
+<h2 class="text-center"> Enter Passengers Info </h2>
+<hr>
+  <form (ngSubmit)="onDataSubmit()" [formGroup]="dataForm" >
+    <div class="row" formArrayName="fields">
+      <div class=" item-container" *ngFor="let fieldCtr of getControls() ;let i = index"
+      [formGroupName]="i" >
+
+      <h3>Passenger Info no {{i +1 }} </h3>
+      <div class="form-group">
+          <label>First Name</label>
+          <input type="text" class="form-control" formControlName="fname">
+        </div>
+      
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" formControlName="lname" >
+      </div>
+      <div class="form-group">
+          <label>Mobile Number</label>
+          <input type="text" class="form-control" formControlName="mobile" >
+      </div>
+
+        
+      </div>
+        
+  
+     
+    </div>
+    <button type="submit" class="btn btn-gray btn-submit" [disabled]="!dataForm.valid">Submit </button>
+  
+  </form>
+
+

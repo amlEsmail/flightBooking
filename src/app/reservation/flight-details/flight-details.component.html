@@ -1,0 +1,42 @@
+<div class="text-center">
+  <h3 class="title">Choose Your Destination</h3>
+</div>
+<form (ngSubmit)="onSubmitFlight(f)" #f=ngForm>
+  <div class="row">
+    <div class="col-xs-12 col-sm-4">
+      <div class="form-group">
+      
+        <select class="form-control" [(ngModel)]="selectedCity" name="depature"  required>
+          <option [value]=city.value *ngFor="let city of cities;let i =index">{{city.city}}</option>
+        </select>
+
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="form-group">
+          <select class="form-control" ngModel name="arrival" required>
+              <option [value]=city.value 
+              *ngFor="let city of cities | filter:selectedCity:'value' ;let i =index">
+              {{city.city}}
+            </option>
+            </select>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4">
+      <div class="form-group">
+          <select class="form-control" [ngModel]="defaultValue" name="passNo" required>
+              <option value="" disabled selected >No of Passengers </option>
+              <option value="1">1</option>
+              <option value="2">2 </option>
+              <option value="3">3 </option>
+              <option value="4">4</option>
+              <option value="5">5 </option>
+              <option value="6">6 </option>
+            </select>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-4 col-sm-offset-4">
+      <button type="submit" class="btn btn-gray btn-submit" [disabled]="!f.valid">Submit</button>
+    </div>
+  </div>
+</form>

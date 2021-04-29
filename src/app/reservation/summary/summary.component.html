@@ -1,0 +1,55 @@
+<h1 class="text-center">Booking successful</h1>
+
+<div class="item-container">
+    <div class="page-header">
+        <div class="container">
+          <h3> Flight Info </h3>
+        </div>
+      </div>
+          <p>
+            <span class="label label-info">departure city :</span>
+            <span class="info">  {{flightInfo.departure}} </span>
+          
+            <span class="label label-success">arrival city :</span>
+            <span class="info">  {{flightInfo.arrival}} </span>
+      
+            <span class="label label-primary">No of Passengers :</span>
+            <span class="info">  {{flightInfo.passengerNo}} </span>
+          </p>
+         
+      
+</div>
+
+<div class="item-container">
+
+    <div class="page-header">
+        <div class="container">
+            <h3> Passengers Info </h3>
+          </div>
+      </div>
+      <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Phone </th>
+                </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let passenger of passengersInfo;let i=index">
+                      <td>{{i+1}}</td>  
+                      <td>{{passenger.lname}}</td>
+                      <td>{{passenger.lname}}</td>
+                      <td>{{passenger.mobile}}</td>
+                    
+                  </tr>
+                  
+                  
+                  </tbody>
+        </table>
+      </div>
+
+</div>
+

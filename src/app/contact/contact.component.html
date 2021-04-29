@@ -1,0 +1,73 @@
+<div class="row address">
+
+        <div class="col-xs-12 col-sm-4 ">
+            <div class="infoOffice ">
+               <span><i class="fa fa-envelope-o"></i></span> 
+                <div>
+                    <h4>Email </h4>
+                    <p>info@yourdomain.com</p>
+                </div>
+      
+            </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-4 ">
+            <div class="infoOffice">
+              <span>
+                  <i class="fa fa-phone"></i>
+              </span>
+               
+                <div>
+                    <h4>Phone  </h4>
+                    <p>(880) 1658 136694</p>
+                </div>
+               
+            </div>
+
+        </div>
+        <div class="col-xs-12 col-sm-4 ">
+            <div class="infoOffice">
+              <span>  <i class="fa fa-map-marker"></i> </span>
+              
+                <div>
+                    <h4>Adderess </h4>
+                    <p>Lorem ipsum dolor sit amet . </p>
+                </div>
+               
+             
+            </div>
+        </div>
+      </div>
+      <div class="row">
+          <div class="col-xs-12  ">
+
+                <form class="cnt-form item-container" #f=ngForm>
+                   
+                    <div class="form-group">
+                            <input  type="email" class="form-control"  
+                            placeholder="your email" ngModel name="email" required />
+                   </div>
+     
+                    <div class="form-group">
+                        <input  type="text" class="form-control"  placeholder="your name " 
+                         ngModel name="name" required />
+                     </div>
+
+                     <div class="form-group">
+                            <input  type="text" class="form-control"  placeholder="subject  " 
+                            ngModel name="subject" />
+                     </div>
+                     <div class="form-group">
+                    <textarea rows="10" cols="40" placeholder="write your message"  
+                    ngModel name="message" required
+                    class="form-control"></textarea>
+                        </div>
+                        <button class="btn btn-gray btn-submit" [disabled]="!f.valid"> Send Message</button>
+
+
+    
+                </form>
+
+          </div>
+      </div>
+
